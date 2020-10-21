@@ -9,3 +9,4 @@ print(n1 * 4)
 print(n1 * 5)
 print(n1 * 6)
 print(n1 * 10)
+
