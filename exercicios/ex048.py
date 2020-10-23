@@ -2,10 +2,9 @@
 # no intervalo de 1 até 500
 
 soma = 0
-contador = 0
-for i in range(1, 501, 2):
-    if i % 3 == 0:
-        contador = contador + 1 # Contador soma "+1" ao valor
-        soma = soma + i # Acumulador "soma" ao valor
-print(f'A soma de todos {contador} valores solicitados é {soma}')
-
+total_numeros = 0
+for c in range (1, 501, 2):
+    if c % 3 == 0:
+        soma = soma + c
+        total_numeros = total_numeros + 1
+print(f'Soma: {soma} // Total numeros: {total_numeros}')
