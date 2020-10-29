@@ -16,3 +16,11 @@ while n != 0:
         else:
             impar += 1
 print(f'Você digitou {par} pares e {impar} impares')
+
+
+r = 'S'
+
+while r == 'S':
+    n = int(input('Informe um valor: '))
+    r = str(input('Quer continuar: [S/N] ')).upper()
+print('fim')
