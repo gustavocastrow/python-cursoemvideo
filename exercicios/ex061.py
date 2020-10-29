@@ -3,13 +3,12 @@
 
 
 primeiro = int(input('Primeiro termo: '))
-razao = int(input('Razão da PA: '))
+razao = int(input('Qual a razão?: '))
 termo = primeiro
-contador = 0
+contador = 1
 
 while contador <= 10:
-    print(f'{termo} ->')
+    print(f'{termo}')
     termo += razao
     contador += 1
-
-
+print('Fim =)')

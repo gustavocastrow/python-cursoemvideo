@@ -3,23 +3,22 @@
 # foram necessários para vencer.
 
 from random import randint
-computador = randint(0, 10) #Gera o número eleatório
-print('Acabei de pensar em um número entre 0 e 10....')
-palpite = 0
+
+computador = randint(0, 10)
+print('Acabei de escolher um numero...')
 acertou = False
+palpite = 0
 
 while not acertou:
     jogador = int(input('Qual seu palpite?: '))
     palpite += 1
+
     if jogador == computador:
         acertou = True
     else:
-        if jogador < computador:
-            print('MAIS... tente mais uma vez')
-        elif jogador > computador:
-                print('Tente mais uma vez')
-print()
-print(f'ACERTOU COM {palpite}')
-
-
+        if jogador > computador:
+            print('Menos..')
+        elif jogador < computador:
+            print('Mais...')
+print(f'Parabéns, você acertou com {palpite}')
 

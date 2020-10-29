@@ -2,18 +2,18 @@
 # O programa encerrará quando ele disser que quer mostrar 0 termos.
 
 primeiro = int(input('Primeiro termo: '))
-razao = int(input('Razão da PA: '))
+razao = int(input('Qual a razão?: '))
 termo = primeiro
-contador = 0
-total = 0
-termos_mais = 10
+contador = 1
+total_termos = 0
+mais = 10
 
-while termos_mais != 0:
-    total = total + termos_mais
-    while contador <= total:
-        print(f'{termo} ->')
+while mais != 0:
+    total_termos += mais
+    while contador <= total_termos:
+        print(f'{termo}')
         termo += razao
         contador += 1
-    print('Pause')
-    termos_mais = int(input('Quantos termos você quer mostrar a mais?: '))
-print(f'Progressão finalizada com {total} termos')
+    print('Pausa...')
+    mais = int(input('Quantos termos você quer mostrar a mais? '))
+print(f'Proressão finalizada com {total_termos} termos.')
