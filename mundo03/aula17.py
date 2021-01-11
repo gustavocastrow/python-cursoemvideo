@@ -1,5 +1,4 @@
-#Listas [] pt 01.
-#Listas sao mutaveis.
+#Variaveis compostas "Listas []"
 
 #Adicionar elementos novos na lista = lista.append('')
 #Adicionar elemento em uma posicao espeficia => lista.insert(0, 'novo elemento') -> o novo elemento sera adicionado na
@@ -13,52 +12,44 @@
 # Ordenando elementos da lista => lista.sort() // ordem reversa => lista.sort(reverse=True)
 # Tamanho da lista => len(lista)
 
+valores = list(range(4, 11))
+
+print(valores)
+
 num = [2, 5, 9, 1]
 num[2] = 3
-num.append(7) # Adicionando um elemento ao final da lista
-num.sort() # Ordenando os elementos da lista
-num.sort(reverse=True) # Invertando a ordem da lista
-num.insert(2, 0) # Inserindo o elemento O na posiscao 2
-num.pop(2) # Removendo o segundo elemento da lista (comeca do 0-1-2)
-num.remove(2) # Remove o primeiro 2 que aparecer na lista caso tenha mais de um 2 precisa utilizar o for
+num.append(7)
+num.sort(reverse=True)
+num.insert(2, 0)
+num.pop() #Remove o ultimo elemento
+num.pop(0) #Remove o primeiro elemento (0)
+num.remove(2) #Procura do inicio da lista o primeiro elemento que for passado como parametro
 print(num)
 print(f'Essa lista tem {len(num)} elementos')
-
-if 5 in num:
-    num.remove(5)
-else:
-    print('Nao encontrei nenhum elemento 5 na lista')
 
 valores = []
 valores.append(5)
 valores.append(9)
 valores.append(4)
 
-for chaves, valor in enumerate(valores): # Pega a chave e o valor
-    print(f'Na posicao {chaves} temos o valor {valor}.')
+print(valores)
+
+for chave, valor in enumerate(valores):
+    print(f'Na posicao {chave} temos o valor: {valor}')
 print('Cheguei ao final da lista')
 
 
-# Lendo valores do teclado e colocando na lista.
-
 valores2 = list()
 for cont in range(0, 5):
-    valores2.append(int(input('Digite um valor: ')))
+    valores2.append(int(input(f'Informe um valor para a posicao {cont}: ')))
 print(valores2)
 
-# Fazendo uma ligacao entre listas, o que mudar em uma sera alterado em outra.
 a = [2, 3, 4, 7]
 b = a
-b[2] = 8
+b[2] = 8 #A partir do momento que iqualo uma lista a outra o py cria uma ligacao entre elas
+print(f'Lista A => {a}')
+print(f'Lista B => {b}')
 
-print(f'Lista A {a}')
-print(f'Lista B {b}')
-
-
-# Copia entre uma lista e outra
-
-x = [1, 2, 3, 4]
-y = x[:] # Todos os valores de X serao jogados em Y, portando ira criar uma copia
-y[2] = 8
-print(f'Lista X {x}')
-print(f'Lista Y {y}')
+#Fazendo uma copia de uma lista
+c = [3, 33 ,5234, 3242]
+d = c[:] #D recebe uma copia dos valores de C

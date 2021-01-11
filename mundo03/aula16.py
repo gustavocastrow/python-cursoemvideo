@@ -1,34 +1,40 @@
-#Tuplas -> variáveis compostas e imutáveis que permitem armazenar vários valores em uma mesma estrutura,
-# acessíveis por chaves individuais.
+#Variaveis compostas -> TUPLAS
 
-# 3 tipos de variaveis compostas -> Tuplas(), Listas[], Dicionarios{}
-#len(tupla) -> retorna quantos elementos tem a tupla.
+#Tuplas () => Variaveis compostas e IMUTAVEIS que permitem armazenar varios valores de tipos diferentes em uma mesma estrutura,
+# acessivel por chaves individuais
+
+#Listas []
+#Dicionarios {}
 
 
 # TUPLAS SÃO IMUTAVEIS, PORTANTO NÃO DA PRA SUBSTITUIR VALORES DE DENTRO DA TUPLA
 
 lanche = ('Hamburger', 'Suco', 'Pizza', 'Pudim')
-print('1 FOR ==============================')
-for comida in lanche:
-    print(f'Eu vou comer {comida}')
-print('2 FOR ==============================')
-for cont in range(0, len(lanche)):
-    print(f'Comi {lanche[cont]} na poisção {cont}')
-print('3 FOR ==============================')
-for pos, food in enumerate(lanche):
-    print(f'Vou comer {food} na posição {pos}')
 
-print(len(lanche))
-print(sorted(lanche)) #Mostra em ordem, porém não mudou a ordem apenas mostrou ordenado.
+print('1 FOR =============')
+
+#Enumerate -> Retorna o dado e a posicao.
+for pos, comida in enumerate(lanche):
+    print(f'Eu vou comer {comida} na posicao {pos}')
+
+for cont in range(0, len(lanche)):
+    print(f'Eu vou comer {lanche[cont]} na posicao {cont}')
+
+#sorted -> mostra em ordem
+print(sorted(lanche))
 
 a = (2, 5, 4)
 b = (5, 8, 1, 2)
-c = b + a
+c = a + b
+
+print(a)
+print(b)
 print(c)
+
+print(len(c))
+
 print(c.count(5))
-print(c.index(8))
+print(c.index(8)) #Retorna a posicao do parametro
 
-# Tuplas aceitam varios tipos de dados, string, number, int, float, boolean
-
-#del(x) -> apaga a tupla
-
+pessoa = ('Gustavo', 25, 'M', 85) #Aceita dados de tipos diferentes
+del(pessoa) #Apaga a tupla

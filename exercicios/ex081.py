@@ -1,25 +1,25 @@
-#Desafio 81 -> Crie um programa que vai ler vários números e colocar em uma lista. Depois disso, mostre:
+#Crie um programa que vai ler vários números e colocar em uma lista.
+# Depois disso, mostre:
 # A) Quantos números foram digitados.
-# B) A lista de valores, ordenada de forma decrescente.
+# B) A lista de valores, ordenada de forma DECRESCENTE.
 # C) Se o valor 5 foi digitado e está ou não na lista.
 
 lista = []
-
 while True:
-    lista.append(int(input('Informe um numero: ')))
-    resposta = str(input('Deseja continuar? [S/N]')).strip().upper()
+    numero = int(input('Informe um numero: '))
+    lista.append(numero)
 
-    if resposta == 'N':
+    resposta = str(input('Deseja continuar? [S/N]: ')).upper().strip()
+
+    if resposta in 'N':
         break
-
-print(f'A => Foram digitados {len(lista)} numeros.')
-
-print(f'Os numeros digitados formaram a seguinte lista: {lista}')
+print(f'A lista informada foi: {lista}')
+print(f'(A): Foram digitados {len(lista)} numeros')
 
 lista.sort(reverse=True)
-print(f'B => Lista de valores de forma decrescente: {lista}')
+print(f'(B): Lista ordenada em ordem DECRESCENTE: {lista}')
 
 if 5 in lista:
-    print('O valor 5 faz parte da lista')
+    print(f'O valor 5 faz parte da lista {lista}')
 else:
-    print('O valor 5 nao faz parte da lista')
+    print('O valor 5 nao faz parte da lista {lista}')

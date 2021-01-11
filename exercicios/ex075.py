@@ -1,27 +1,14 @@
-#Desafio 075 -> Desenvolva um programa que leia quatro valores pelo teclado e guarde-os em uma tupla. No final, mostre:
-# A) Quantas vezes apareceu o valor 9.
-# B) Em que posição foi digitado o primeiro valor 3.
-# C) Quais foram os números pares.
+#Desenvolva um programa que leia quatro valores pelo teclado e guarde-os em uma tupla. No final, mostre:
 
-num = (int(input('N1: ')),
-       int(input('N2: ')),
-       int(input('N3: ')),
-       int(input('N4: ')))
+num = (int(input('Numero 01: ')), int(input('Numero 02: ')), int(input('Numero 03: ')), int(input('Numero 04: ')))
+
 print(num)
 
-
-# Quantas vezes apareceu o valor 9:
+#Quantas vezes apareceu o valor 9?
 print(f'O valor 9 apareceu {num.count(9)}')
 
-# Em que posição foi digitado o valor 3
-
+#Em que posicao foi digitado o valor 3?
 if 3 in num:
-    print(f'O valor 3 apareceu na {num.index(3)+1} posicao')
+    print(f'O valor 3 apareceu na posicao {num.index(3)+1}')
 else:
-    print(f'O valor 3 nao foi digitado em nenhuma posicao.')
-
-
-# Quais foram os numeros pares
-for numero in num:
-    if numero % 2 == 0:
-        print(f'Os valores pares digitados foram {numero}')
+    print('O valor 3 nao foi digitado')

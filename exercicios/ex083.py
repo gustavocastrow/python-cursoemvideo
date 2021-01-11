@@ -1,12 +1,12 @@
-#Desafio 83 => Crie um programa onde o usuário digite uma expressão qualquer que use parênteses. Seu aplicativo
-# deverá analisar se a expressão passada está com os parênteses abertos e fechados na ordem correta.
+# Crie um programa onde o usuário digite uma expressão qualquer que use parênteses. Seu aplicativo deverá analisar se a
+# expressão passada está com os parênteses abertos e fechados na ordem correta.
 
-expr = str(input('Digite a expressao: '))
+expressao = str(input('Digite a expressao: '))
 pilha = []
 
-for simbolo in expr:
+for simbolo in expressao:
     if simbolo == '(':
-        pilha.append('(')
+       pilha.append('(')
 
     elif simbolo == ')':
         if len(pilha) > 0:
@@ -15,6 +15,6 @@ for simbolo in expr:
             pilha.append(')')
             break
 if len(pilha) == 0:
-    print('Sua expressao esta valida: ')
+    print('Sua expressao esta validada!')
 else:
-    print('Sua epxressao esta errad! ')
+    print('Sua expresao esta errada!')
